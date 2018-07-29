@@ -107,7 +107,7 @@ export const loginUser = ({ email, password }) => {
       // manually dispatch ourself
       .then(user => loginUserSuccess(dispatch, user))
       .catch((error) => {
-        console.log(error);
+        console.log('loginUserError: ', error);
         loginUserFail(dispatch);
       })
   };
@@ -119,7 +119,7 @@ export const signUpUser = ({ email, password , name}) => {
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(user => signUpUserSuccess(dispatch, user, name))
       .catch((error) => {
-        console.log(error);
+        console.log('SignUpError: ', error);
         const errorMessage = error.message;
         return signUpUserFail(dispatch, errorMessage);
       });

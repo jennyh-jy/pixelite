@@ -2,20 +2,16 @@
 import React, { Component } from 'react';
 import { createStackNavigator, addNavigationHelpers } from 'react-navigation';
 import { createStore, applyMiddleware, compose } from 'redux';
-import {
-  createReactNavigationReduxMiddleware,
-  initializeListeners,
-  createReduxBoundAddListener,
-} from 'react-navigation-redux-helpers';
+import { createReactNavigationReduxMiddleware, initializeListeners, createReduxBoundAddListener } from 'react-navigation-redux-helpers';
 import { Provider, connect } from 'react-redux';
 import ReduxThunk from 'redux-thunk';
-
 import firebase from 'firebase';
 
 import { GOOGLE_FIREBASE_API_KEY } from './apis';
 import reducers from './src/reducers';
 import { RootNavigator } from './src/Router';
 import NavigatorService from './src/Navigator';
+
 
 const navReducer = (state, action) => {
   const newState = RootNavigator.router.getStateForAction(action, state);
