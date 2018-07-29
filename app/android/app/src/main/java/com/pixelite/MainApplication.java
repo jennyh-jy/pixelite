@@ -1,4 +1,4 @@
-package com.pixelitecli;
+package com.pixelite;
 
 import android.app.Application;
 
