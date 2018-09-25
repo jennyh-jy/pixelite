@@ -39,9 +39,8 @@ class Login extends Component {
     return (
       <LinearGradient
         start={{x: 0.0, y: 0.0}} end={{x: 1.0, y: 1.0}}        
-        // colors={['#f9855a', '#eb3d3d', '#fe161d']}
-        // colors={['#ffe36b', '#f94f25', '#ff3535']}
-        colors={['#42a5f5', '#039be5', '#00838f']}
+        // colors={['#f6c377', '#e48832', '#ffb000']}
+        colors={['#f9855a', '#eb3d3d', '#fe161d']}
         style={{
           flex: 1,
           justifyContent: 'center',
